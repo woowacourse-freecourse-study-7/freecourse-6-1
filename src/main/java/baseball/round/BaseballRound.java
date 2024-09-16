@@ -1,8 +1,6 @@
 package baseball.round;
 
-import baseball.game.BaseballOpponentPlayer;
-import baseball.game.BaseballReferee;
-import baseball.game.BaseballUserPlayer;
+import baseball.game.*;
 
 public class BaseballRound implements Round{
     private final BaseballUserPlayer baseballUserPlayer = new BaseballUserPlayer();
@@ -18,7 +16,11 @@ public class BaseballRound implements Round{
             System.out.println("숫자를 입력해주세요 : ");
             String userPlayerNumber = baseballUserPlayer.playGame();
 
-            Result judgeResult = baseballReferee.judge(batterNumber, fielderNumber);
+            GameResult gameResult = baseballReferee.judge(userPlayerNumber, opponentPlayerNumber);
+
+            gameResult.printResult();
+
+            isThreeStrike = gameResult.isThreeStrike();
 
 
 
