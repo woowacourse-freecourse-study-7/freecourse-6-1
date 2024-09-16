@@ -1,5 +1,5 @@
 package baseball.game;
 
-public enum GameState {
+public enum NumberState {
     BALL, STRIKE, NOTHING
 }

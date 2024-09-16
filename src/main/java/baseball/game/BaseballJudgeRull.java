@@ -2,15 +2,15 @@ package baseball.game;
 
 public class BaseballJudgeRull {
 
-    public GameState checkGameState(String userNumber, int userNumberIdx, String opponentNumber) {
+    public NumberState checkGameState(String userNumber, int userNumberIdx, String opponentNumber) {
         if (opponentNumber.contains(userNumber)) {
             if (opponentNumber.indexOf(userNumber) == userNumberIdx) {
-                return GameState.STRIKE;
+                return NumberState.STRIKE;
             } else {
-                return GameState.BALL;
+                return NumberState.BALL;
             }
         } else {
-            return GameState.NOTHING;
+            return NumberState.NOTHING;
         }
     }
 }

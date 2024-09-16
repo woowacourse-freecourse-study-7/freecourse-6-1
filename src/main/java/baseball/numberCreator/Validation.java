@@ -1,5 +1,7 @@
 package baseball.numberCreator;
 
+import static baseball.utils.Constant.*;
+
 public class Validation {
     public void validateBaseballNumber(String number) {
 
@@ -44,7 +46,6 @@ public class Validation {
 
     public void validateGameContinueNumber(String number) {
         class GameContinueNumberValidation {
-
             private boolean isCorrectNumber() {
                 return Integer.parseInt(number) == GAME_CONTINUE_NUMBER || Integer.parseInt(number) == GAME_STOP_NUMBER;
             }

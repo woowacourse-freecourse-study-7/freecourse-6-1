@@ -7,13 +7,14 @@ public class BaseballReferee {
         GameResult gameResult = new GameResult();
 
         for (String num: userPlayerNumber.split("")) {
-            GameState gameState = baseballJudgeRull.checkGameState(num, userPlayerNumber.indexOf(num), opponentPlayerNumber) {
-                switch (gameState) {
-                    case STRIKE:
-                        gameResult.addStrikeCnt();
-                    case BALL:
-                        gameResult.addBallCnt();
-                }
+            NumberState numberState = baseballJudgeRull.checkGameState(num, userPlayerNumber.indexOf(num), opponentPlayerNumber);
+            switch (numberState) {
+                case STRIKE:
+                    gameResult.addStrikeCnt();
+                    break;
+                case BALL:
+                    gameResult.addBallCnt();
+                    break;
             }
         }
         return gameResult;

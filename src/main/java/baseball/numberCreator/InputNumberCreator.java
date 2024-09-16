@@ -1,5 +1,6 @@
 package baseball.numberCreator;
 
+import static baseball.utils.Constant.*;
 import camp.nextstep.edu.missionutils.Console;
 
 public class InputNumberCreator {

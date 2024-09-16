@@ -3,27 +3,17 @@ package baseball.game;
 public class GameResult {
     private int ballCnt;
     private int strikeCnt;
-    private boolean isThreeStrike;
-
 
     public void addStrikeCnt() {
-        strikeCnt ++;
+        strikeCnt++;
     }
 
     public void addBallCnt() {
-        ballCnt ++;
-    }
-
-    public int getStrikeCnt() {
-        return strikeCnt;
-    }
-
-    public int getBallCnt() {
-        return ballCnt;
+        ballCnt++;
     }
 
     public boolean isThreeStrike() {
-        return isThreeStrike;
+        return strikeCnt == 3;
     }
 
     public void printResult() {
@@ -38,12 +28,11 @@ public class GameResult {
             if (strikeCnt > 0) {
                 judgeResult += strikeCnt + "스트라이크";
 
-                if (isThreeStrike) {
+                if (isThreeStrike()) {
                     judgeResult += "\n3개의 숫자를 모두 맞히셨습니다! 게임 종료";
                 }
             }
         }
-
         System.out.println(judgeResult);
     }
 }
