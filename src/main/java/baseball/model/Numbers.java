@@ -9,11 +9,13 @@ public class Numbers {
 
     private List<Integer> numbers;
 
+    //컴퓨터 수
     public Numbers(){
         ComputerNumbers computerNumbers = new ComputerNumbers();
         this.numbers =computerNumbers.generate();
     }
 
+    //User 수
     public Numbers(String input){
         validateNonNumeric(input);
         validateDigit(input);
