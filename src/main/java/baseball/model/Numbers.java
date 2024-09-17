@@ -3,6 +3,8 @@ package baseball.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import static baseball.validator.NumbersValidator.*;
+
 public class Numbers {
 
     private List<Integer> numbers;
@@ -13,6 +15,11 @@ public class Numbers {
     }
 
     public Numbers(String input){
+        validateNonNumeric(input);
+        validateDigit(input);
+        validateDuplicateNumber(input);
+        validateRange(input);
+
         this.numbers=StringToIntNumbers(input);
     }
 

@@ -3,6 +3,8 @@ package baseball.view;
 import baseball.model.Numbers;
 import camp.nextstep.edu.missionutils.Console;
 
+import static baseball.validator.CommandValidator.validateRestartNumber;
+
 public class InputView {
 
     public static Numbers setUserNumber(){
@@ -17,7 +19,7 @@ public class InputView {
         System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
 
         String input = Console.readLine();
-        //validateRestartNumber(input);
+        validateRestartNumber(input);
         return input;
     }
 }
