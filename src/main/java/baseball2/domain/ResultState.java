@@ -1,4 +1,5 @@
 package baseball2.domain;
 
-public class ResultState {
+public enum ResultState {
+    BALL, STRIKE, OUT
 }
