@@ -2,6 +2,8 @@ package baseball2.view;
 
 import baseball2.domain.UserResult;
 
+import static baseball2.utils.PrintLine.*;
+
 public class OutputView {
 
     public void printUserResult(UserResult userResult) {
@@ -19,12 +21,16 @@ public class OutputView {
                 judgeResult += strikeCnt + "스트라이크";
 
                 if (userResult.isThreeStrike()) {
-                    judgeResult += "\n3개의 숫자를 모두 맞히셨습니다! 게임 종료";
+                    judgeResult += "\n" + GAME_CLEAR_LINE;
                 }
             }
         }
         System.out.println(judgeResult);
         System.out.println();
+    }
+
+    public void printStopRound() {
+        System.out.println(ROUND_STOP_LINE);
     }
 
 

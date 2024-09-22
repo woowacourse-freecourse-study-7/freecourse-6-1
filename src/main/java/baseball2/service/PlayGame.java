@@ -9,7 +9,7 @@ public class PlayGame {
         UserResult userResult = new UserResult();
 
         for (String num: userNumber.split("")) {
-            ResultState resultState = checkGameState(num, userNumber.indexOf(num), computerNumber);
+            ResultState resultState = ResultState.getResultState(num, userNumber.indexOf(num), computerNumber);
             switch (resultState) {
                 case STRIKE:
                     userResult.addStrikeCnt();
@@ -20,18 +20,5 @@ public class PlayGame {
             }
         }
         return userResult;
-    }
-
-    //REsultstate 안에 넣으면 좋을듯.
-    private ResultState checkGameState(String userNumber, int userNumberIdx, String computerNumber) {
-        if (computerNumber.contains(userNumber)) {
-            if (computerNumber.indexOf(userNumber) == userNumberIdx) {
-                return ResultState.STRIKE;
-            } else {
-                return ResultState.BALL;
-            }
-        } else {
-            return ResultState.OUT;
-        }
     }
 }

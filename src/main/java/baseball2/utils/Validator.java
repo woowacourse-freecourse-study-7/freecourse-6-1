@@ -4,10 +4,9 @@ import static baseball2.utils.Constant.*;
 import static baseball2.utils.Exceptions.*;
 
 public class Validator {
+
     public void validateBaseballNumber(String number) {
-
         class BaseballNumberValidation {
-
             private boolean isCorrectLength() {
                 return number.length() == BALL_CNT;
             }
@@ -30,7 +29,6 @@ public class Validator {
                 return true;
             }
         }
-
         BaseballNumberValidation baseballNumberValidation = new BaseballNumberValidation();
         /**
          * 잘못된 값인 경우
@@ -51,7 +49,6 @@ public class Validator {
                 return Integer.parseInt(number) == GAME_CONTINUE_NUMBER || Integer.parseInt(number) == GAME_STOP_NUMBER;
             }
         }
-
         /**
          * 잘못된 값인 경우
          * 1. 1 또는 2가 아닐때

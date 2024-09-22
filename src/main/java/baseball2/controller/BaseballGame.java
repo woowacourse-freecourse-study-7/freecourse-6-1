@@ -14,7 +14,7 @@ public class BaseballGame {
 
     public void playOneRound() {
         boolean isThreeStrike = false;
-        ComputerNumber computerNumber = new ComputerNumber();
+        final ComputerNumber computerNumber = new ComputerNumber(); //final 넣어도 되나?
 
         while (!isThreeStrike) {
             UserNumber userNumber = new UserNumber(inputView.inputUserNumber());
@@ -29,13 +29,12 @@ public class BaseballGame {
     }
 
     public void continueOrStopRound() {
-        System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
         boolean continueGame = inputView.inputContinueGameNumber();
 
         if (continueGame) {
             playOneRound();
         } else {
-            System.out.println("게임을 종료합니다.");
+            outputView.printStopRound();
         }
     }
 }

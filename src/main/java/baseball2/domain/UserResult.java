@@ -1,5 +1,9 @@
 package baseball2.domain;
 
+import baseball2.utils.Constant;
+
+import static baseball2.utils.Constant.BALL_CNT;
+
 public class UserResult {
 
     private int ballCnt;
@@ -22,6 +26,6 @@ public class UserResult {
     }
 
     public boolean isThreeStrike() {
-        return strikeCnt == 3;
+        return strikeCnt == BALL_CNT;
     }
 }
