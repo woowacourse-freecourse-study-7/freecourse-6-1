@@ -21,7 +21,6 @@ public class ComputerNumber {
     }
 
     private String pickRandomNumberInRange() { //접근제어자로 내부 메서드임을 선언
-        //정수->문자열로 변환
         List<String> computer = new ArrayList<>();
 
         while (computer.size() < BALL_CNT) {

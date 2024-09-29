@@ -1,7 +1,5 @@
 package baseball2.domain;
 
-import baseball2.utils.Constant;
-
 import static baseball2.utils.Constant.BALL_CNT;
 
 public class UserResult {
